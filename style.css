@@ -118,7 +118,7 @@ html::-webkit-scrollbar-thumb{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url('image/background_cake.jpg');
+    background-image: url('https://github.com/Prinsh-85/Projects/blob/main/background_cake.jpg?raw=true');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right right;
