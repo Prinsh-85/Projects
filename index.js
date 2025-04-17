@@ -85,3 +85,37 @@ var swiper = new Swiper(".blogs-row", {
       },
     },
   });
+  
+  document.getElementById('filterForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const priceValue = document.getElementById('priceRange').value;
+    const flavourValue = document.getElementById('flavour').value;
+    const sizeValue = document.getElementById('size').value;
+
+    const cakes = document.querySelectorAll('.cake-item');
+
+    cakes.forEach(cake => {
+      const price = parseInt(cake.getAttribute('data-price'));
+      const flavour = cake.getAttribute('data-flavour');
+      const size = cake.getAttribute('data-size');
+
+      let show = true;
+
+      if (priceValue !== 'all') {
+        const [min, max] = priceValue.split('-').map(Number);
+        if (price < min || price > max) show = false;
+      }
+
+      if (flavourValue !== 'all' && flavour !== flavourValue) {
+        show = false;
+      }
+
+      if (sizeValue !== 'all' && size !== sizeValue) {
+        show = false;
+      }
+
+      cake.style.display = show ? 'block' : 'none';
+    });
+  });
+

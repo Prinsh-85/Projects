@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Cake Shop</title>
-
+      
     <!-- swiper link  -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
@@ -18,11 +18,9 @@
 </head>
 
 <body>
-
-    <!-- header section start here  -->
     <header class="header">
         <div class="logoContent">
-            <a href="#" class="logo"><img src="C:\Users\saura\Desktop\new project\image\logo.jpg" alt=""></a>
+            <a href="#" class="logo"><img src="image\logo.jpg" alt=""></a>
             <h1 class="logoName">Online Cake Shop</h1>
         </div>
 
@@ -33,7 +31,45 @@
             <a href="#review">review</a>
             <a href="#contact">contact</a>
         </nav>
-
+        <body>
+            <div id="filter-section">
+              <h3>Filter Cakes</h3>
+              <form id="filterForm">
+                <label>Price Range:
+                  <select id="priceRange">
+                    <option value="all">All</option>
+                    <option value="0-550">₹0 - ₹550</option>
+                    <option value="550-1000">₹550 - ₹1000</option>
+                    <option value="1000-1200">₹1000 - ₹1200</option>
+                  </select>
+                </label>
+          
+                <label>Flavour:
+                  <select id="flavour">
+                    <option value="all">All</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="vanilla">Vanilla</option>
+                    <option value="Black forest">Black forest</option>
+                    <option value="Fruit Cake">Fruit Cake</option>
+                    <option value="Pineapple">Pineapple</option>
+                    <option value="Ice Cream">Vanilla</option>
+                    <option value="Red Velvet">Red Velvet</option>
+                    <option value="Strawberry">Strawberry</option>
+                  </select>
+                </label>
+          
+                <label>Size:
+                  <select id="size">
+                    <option value="all">All</option>
+                    <option value="0.5">0.5 Kg</option>
+                    <option value="1">1 Kg</option>
+                  </select>
+                </label>
+          
+                <button type="submit">Apply Filters</button>
+              </form>
+            </div>
+          </body>
         <div class="icon">
             <i class="fas fa-search" id="search"></i>
             <i class="fas fa-bars" id="menu-bar"></i>
@@ -43,10 +79,7 @@
             <input type="search" placeholder="search...">
         </div>
     </header>
-    <!-- header section end here  -->
-
-    <!-- home section start here  -->
-    <section class="home" id="home">
+    <section class="home" id="home" >
         <div class="homeContent" >
             <h2>Delicious Cake for Everyone (24x7)</h2>
             <p>Cravings, Meet Your Match! Discover a world of delightful cakes, cupcakes and desserts you won't forget.</p>
@@ -55,10 +88,6 @@
              </div>
         </div>
     </section>
-
-    <!-- home section end here  -->
-
-    <!-- product section start here  -->
     <section class="product" id="product">
         <div class="heading">
             <h2>Our Exclusive Products</h2>
@@ -67,12 +96,13 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide box">
                     <div class="img">
-                        <img src="C:\Users\saura\Downloads\cake 1.png" alt="">
+                        <img src="image\cake 1.png" alt="">
                     </div>
                     <div class="product-content">
                         <h3>Chocolate</h3>
                         <p>First we eat the chocolate cake, then we conquer the world.
                         </p>
+                        <p>Prise=550 Rs.</p>
                         <div class="orderNow">
                             <button>Order Now </button>
                         </div>
@@ -80,12 +110,13 @@
                 </div>
                 <div class="swiper-slide box">
                     <div class="img">
-                        <img src="C:\Users\saura\Downloads\cake 2.png" alt="">
+                        <img src="image\cake 2.png" alt="">
                     </div>
                     <div class="product-content">
                         <h3>Black-Forest</h3>
                         <p>Black Forest cake: where chocolate meets cherry in a love story of layers.
                         </p>
+                        <p>Prise=600 Rs.</p>
                         <div class="orderNow">
                             <button>Order Now </button>
                         </div>
@@ -93,12 +124,13 @@
                 </div>
                 <div class="swiper-slide box">
                     <div class="img">
-                        <img src="C:\Users\saura\Downloads\cake 3.png" alt="">
+                        <img src="image\cake 3.png" alt="">
                     </div>
                     <div class="product-content">
                         <h3>Strawberry</h3>
                         <p>Strawberry cake: sunshine in every slice.
                         </p>
+                        <p>Prise=800 Rs.</p>
                         <div class="orderNow">
                             <button>Order Now </button>
                         </div>
@@ -106,12 +138,13 @@
                 </div>
                 <div class="swiper-slide box">
                     <div class="img">
-                        <img src="C:\Users\saura\Downloads\cake 4.png" alt="">
+                        <img src="image\cake 4.png" alt="">
                     </div>
                     <div class="product-content">
                         <h3>Vanilla</h3>
                         <p>When elegance meets flavor, you get vanilla cake.
                         </p>
+                        <p>Prise=550 Rs.</p>
                         <div class="orderNow">
                             <button>Order Now </button>
                         </div>
@@ -125,12 +158,13 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide box">
                     <div class="img">
-                        <img src="C:\Users\saura\Downloads\cake 5.png" alt="">
+                        <img src="image\cake 5.png" alt="">
                     </div>
                     <div class="product-content">
                         <h3>Red Velvet</h3>
                         <p>One slice of red velvet, and the world feels right again.
                         </p>
+                        <p>Prise=1000 Rs.</p>
                         <div class="orderNow">
                             <button>Order Now </button>
                         </div>
@@ -138,12 +172,13 @@
                 </div>
                 <div class="swiper-slide box">
                     <div class="img">
-                        <img src="C:\Users\saura\Downloads\cake 6.png" alt="">
+                        <img src="image\cake 6.png" alt="">
                     </div>
                     <div class="product-content">
                         <h3>Fruit Cake</h3>
                         <p>It’s not just cake. It’s tradition wrapped in sweetness.
                         </p>
+                        <p>Prise=1200 Rs.</p>
                         <div class="orderNow">
                             <button>Order Now </button>
                         </div>
@@ -151,12 +186,13 @@
                 </div>
                 <div class="swiper-slide box">
                     <div class="img">
-                        <img src="C:\Users\saura\Downloads\cake 7.png" alt="">
+                        <img src="image\cake 7.png" alt="">
                     </div>
                     <div class="product-content">
                         <h3>Pineapple</h3>
                         <p>Pineapple cake—where tropical dreams come true.
                         </p>
+                        <p>Prise=700 Rs.</p>
                         <div class="orderNow">
                             <button>Order Now </button>
                         </div>
@@ -164,12 +200,13 @@
                 </div>
                 <div class="swiper-slide box">
                     <div class="img">
-                        <img src="C:\Users\saura\Downloads\cake 8.png" alt="">
+                        <img src="image\cake 8.png" alt="">
                     </div>
                     <div class="product-content">
                         <h3>Ice Cream</h3>
                         <p>Cool, creamy, and cake-tastically dreamy.
                         </p>
+                        <p>Prise=900 Rs.</p>
                         <div class="orderNow">
                             <button>Order Now </button>
                         </div>
@@ -181,41 +218,47 @@
         </div>
     </section>
 
-    <!-- product section end here  -->
-
-    <!-- blogs section start here  -->
     <section class="blogs" id="blogs">
 
         <div class=" swiper blogs-row">
             <div class="swiper-wrapper">
                 <div class=" swiper-slide box">
                     <div class="img">
-                        <img src="C:\Users\saura\Downloads\cake 9.png" alt="">
+                        <img src="image\cake 9.png" alt="">
                     </div>
                     <div class="content">
-                        <h3>Caramel Bourbon Vanilla Cupcakes </h3>
-                        <p>These bourbon vanilla cupcakes are perfectly moist, and completely irresistble!
-                            Spiked with bourbon and swirled with vanilla buttercream!</p>
+                        <h3>Vanilla Cupcakes </h3>
+                        <p>These vanilla cupcakes are perfectly moist, and completely irresistble!
+                            and swirled with vanilla buttercream!</p>
                         <p>This is very sweet cupcake.</p>
+                        <p>Prise=140 Rs.</p>
+                        <div class="orderNow">
+                            <button>Order Now </button>
+                        </div>
                         <a href="#blogs" class="btn">learn more</a>
                     </div>
                 </div>
                 <div class=" swiper-slide box">
                     <div class="img">
-                        <img src="C:\Users\saura\Downloads\cake 10.png" alt="">
+                        <img src="image\cake 10.png" alt="">
                     </div>
                     <div class="content">
                         <h3>Red velvet cupcakes </h3>
                         <p>Famous Red velvet cake, Signature cream cheese frosting,
                             with pecan or cakecrumbles.
                         </p>
+
                         <p>This is very sweet cupcake.</p>
+                        <p>Prise=220 Rs.</p>
+                        <div class="orderNow">
+                            <button>Order Now </button>
+                        </div>
                         <a href="#blogs" class="btn">learn more</a>
                     </div>
                 </div>
                 <div class=" swiper-slide box">
                     <div class="img">
-                        <img src="C:\Users\saura\Downloads\cake 11.png" alt="">
+                        <img src="image\cake 11.png" alt="">
                     </div>
                     <div class="content">
                         <h3>chocolate cream cupcakes </h3>
@@ -223,6 +266,10 @@
                             butter cream frosting.
                         </p>
                         <p>This is very sweet cupcake.</p>
+                        <p>Prise=110 Rs.</p>
+                        <div class="orderNow">
+                            <button>Order Now </button>
+                        </div>
                         <a href="#blogs" class="btn">learn more</a>
                     </div>
                 </div>
@@ -235,10 +282,6 @@
         </div>
     </section>
 
-    <!-- blogs section ends here  -->
-
-    <!-- newsletter section start here  -->
-
     <section class="newsletter">
         <form action="">
             <h3>subscribe for latest update</h3>
@@ -246,24 +289,26 @@
             <input type="button" value="subscribe" class="box2">
         </form>
     </section>
-    <!-- newsletter section ends here  -->
-
-    <!-- review section start here  -->
+    <div>
+    <form action="https://hook.us2.make.com/m79gps59qlyrpwfovhdq6xmglvlmo0qu" method="POST">
+        <input type="text" name="cake" placeholder="Cake Name" />
+        <input type="number" name="quantity" placeholder="Quantity" />
+        <input type="text" name="customer" placeholder="Your Name" />
+        <button type="submit">Place Order</button>
+      </form>
+    </div>
     <section class="review" id="review">
         <div class="heading">
             <h2>client review</h2>
         </div>
-
-
-        <div class=" swiper review-row">
-            <div class="swiper-wrapper">
+        <div class=" swiper review-row"> <div class="swiper-wrapper">
                 <div class="swiper-slide box">
                     <div class="client-review">
                         <p>The layout is so clean and colorful — really gives a premium bakery vibe!</p>
                     </div>
                     <div class="client-info">
                         <div class="img">
-                            <img src="C:\Users\saura\Desktop\new project\image\Pushkar.jpg" alt="">
+                            <img src="image\Pushkar.jpg" alt="">
                         </div>
                         <div class="clientDetailed">
                             <h3>Pushkar Jain</h3>
@@ -277,7 +322,7 @@
                     </div>
                     <div class="client-info">
                         <div class="img">
-                            <img src="C:\Users\saura\Desktop\new project\image\Sarthak.jpg" alt="">
+                            <img src="image\Sarthak.jpg" alt="">
                         </div>
                         <div class="clientDetailed">
                             <h3>Sarthak Mithaulia</h3>
@@ -291,7 +336,7 @@
                     </div>
                     <div class="client-info">
                         <div class="img">
-                            <img src="C:\Users\saura\Desktop\new project\image\Shivam.jpg" alt="">
+                            <img src="image\Shivam.jpg" alt="">
                         </div>
                         <div class="clientDetailed">
                             <h3>Shivam Shukla</h3>
@@ -305,7 +350,7 @@
                     </div>
                     <div class="client-info">
                         <div class="img">
-                            <img src="C:\Users\saura\Desktop\new project\image\ratan.jpg" alt="">
+                            <img src="image\ratan.jpg" alt="">
                         </div>
                         <div class="clientDetailed">
                             <h3>Ratan Shukla</h3>
@@ -318,15 +363,12 @@
             </div>
         </div>
     </section>
-    <!-- review section ends here  -->
-
-    <!-- footer section start here  -->
 
     <footer class="footer" id="contact">
         <div class="box-container">
             <div class="mainBox">
                 <div class="content">
-                    <a href="#"><img src="C:\Users\saura\Desktop\new project\image\logo.jpg" alt=""></a>
+                    <a href="#"><img src="image\logo.jpg" alt=""></a>
                     <h1 class="logoName"> Online Cake Shop </h1>
                 </div>
 
@@ -376,8 +418,6 @@
 
     <!-- custom js file  -->
     <script src="index.js"></script>
-
-
 </body>
 
 </html>

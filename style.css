@@ -72,6 +72,20 @@ html::-webkit-scrollbar-thumb{
     cursor: pointer;
 }
 
+  #filterForm button {
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  #filterForm button:hover {
+    background-color: #333;
+  }  
+
 .header .search{
     display: none;
     top: 100%;
@@ -100,13 +114,12 @@ html::-webkit-scrollbar-thumb{
 #menu-bar{
     display: none;
 }
-
-
 .home {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url("C:\Users\saura\Desktop\new project\image\background cake.jpg") no-repeat;
+    background-image: url('image/background_cake.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: right right;
 }
@@ -207,7 +220,7 @@ section{
 }
 
 .blogs{
-    background: url("C:\Users\saura\Downloads\background image.png") no-repeat;
+    background: url("C:\Users\saura\Desktop\new project\image\background_cake.jpg") no-repeat;
     background-size: cover;
     background-position: center center;
 }
@@ -240,6 +253,24 @@ section{
     padding: 1rem 0;
     line-height: 1.8;
     
+}
+.blogs .blogs-row .box .content .orderNow{
+height: 3rem;
+margin-top: 2rem;
+margin-bottom: 3rem;
+}
+.blogs .blogs-row .box .content .orderNow button{
+
+ font-size: 1.8rem;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: .7rem;
+    padding: .7rem 2rem;
+    cursor: pointer;
+}
+.blogs .blogs-row .box .content .orderNow button:hover{
+
+    font-size: 2rem;
 }
 .blogs .blogs-row .box .content a{
     font-size: 2rem;
