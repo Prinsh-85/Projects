@@ -118,4 +118,37 @@ var swiper = new Swiper(".blogs-row", {
       cake.style.display = show ? 'block' : 'none';
     });
   });
-
+  const express = require('express');
+  const mysql = require('mysql2');
+  const cors = require('cors');
+  
+  const app = express();
+  app.use(cors());
+  app.use(express.json());
+  
+  // DB Connection
+  const db = mysql.createConnection({
+    host: 'localhost',
+    user: 'BaadShahDanger',
+    password: 'Prinsh@854200',
+    database: 'cake_shop'
+  });
+  
+  db.connect(err => {
+    if (err) throw err;
+    console.log('Connected to MySQL database!');
+  });
+  
+  // Route to get cakes
+  app.get('/cakes', (req, res) => {
+    db.query('SELECT * FROM cakes', (err, result) => {
+      if (err) return res.status(500).send(err);
+      res.json(result);
+    });
+  });
+  
+  const PORT = 3000;
+  app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
+  });
+  
