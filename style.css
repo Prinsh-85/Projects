@@ -69,6 +69,7 @@ html::-webkit-scrollbar-thumb{
     font-size: 2rem;
     margin-right: 2rem;
     color: var(--black);
+    padding:var(--blue);
     cursor: pointer;
 }
 
@@ -118,7 +119,7 @@ html::-webkit-scrollbar-thumb{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url('https://github.com/Prinsh-85/Projects/blob/main/background_cake.jpg?raw=true');
+    background-image: url('image/background_cake.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right right;
@@ -128,6 +129,7 @@ html::-webkit-scrollbar-thumb{
     float: left;
     text-align: center;
     padding: 4rem;
+    margin-top: 34vh;
 }
 .home .homeContent h2{
     font-size: 7rem;
@@ -220,7 +222,7 @@ section{
 }
 
 .blogs{
-    background: url("https://github.com/Prinsh-85/Projects/blob/main/background%202.jpg?raw=true") no-repeat;
+    background: url("image/background 2.jpg") no-repeat;
     background-size: cover;
     background-position: center center;
 }
@@ -492,3 +494,36 @@ margin-bottom: 3rem;
         font-size: 50%;
     }
 }
+
+  .prinsh{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    width: 300px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  input, button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #ff6b81;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ff4757;
+  }
+  
