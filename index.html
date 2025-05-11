@@ -33,23 +33,35 @@
             <a href="#review">review</a>
             <a href="#contact">contact</a>
         </nav>
-
+        <h2>Cake List</h2>
+        <ul id="cake-list"></ul>
         
-            <div id="filter-section">
-                <h3>Filter Cakes</h3>
-                <form id="filterForm">
-                    <label>Price Range:
-                        <select id="priceRange">
-                            <option value="all">All</option>
+        <div class="filter-container">
+            <button id="filterToggle" class="filter-toggle-btn">
+                <i class="fas fa-filter"></i> Filter Cakes
+            </button>
+            
+            <div id="filterPopup" class="filter-popup">
+                <div class="popup-header">
+                    <h3>Filter Options</h3>
+                    <span class="close-popup">&times;</span>
+                </div>
+                
+                <form id="filterForm" class="filter-form">
+                    <div class="filter-group">
+                        <label class="filter-label">Price Range</label>
+                        <select id="priceRange" class="filter-select">
+                            <option value="all">All Prices</option>
                             <option value="0-550">₹0 - ₹550</option>
                             <option value="550-1000">₹550 - ₹1000</option>
                             <option value="1000-1200">₹1000 - ₹1200</option>
                         </select>
-                    </label>
-
-                    <label>Flavour:
-                        <select id="flavour">
-                            <option value="all">All</option>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Flavour</label>
+                        <select id="flavour" class="filter-select">
+                            <option value="all">All Flavours</option>
                             <option value="chocolate">Chocolate</option>
                             <option value="vanilla">Vanilla</option>
                             <option value="Black forest">Black forest</option>
@@ -59,20 +71,24 @@
                             <option value="Red Velvet">Red Velvet</option>
                             <option value="Strawberry">Strawberry</option>
                         </select>
-                    </label>
-
-                    <label>Size:
-                        <select id="size">
-                            <option value="all">All</option>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Size</label>
+                        <select id="size" class="filter-select">
+                            <option value="all">All Sizes</option>
                             <option value="0.5">0.5 Kg</option>
                             <option value="1">1 Kg</option>
                         </select>
-                    </label>
-
-                    <button type="submit">Apply Filters</button>
+                    </div>
+                    
+                    <div class="filter-actions">
+                        <button type="reset" class="reset-btn">Reset</button>
+                        <button type="submit" class="apply-btn">Apply Filters</button>
+                    </div>
                 </form>
             </div>
-        </body>
+        </div>
         <div class="icon">
             <i class="fas fa-search" id="search"></i>
             <i class="fas fa-bars" id="menu-bar"></i>
@@ -107,8 +123,39 @@
                         <p>First we eat the chocolate cake, then we conquer the world.
                         </p>
                         <p>Price=550 Rs.</p>
-                        <div class="orderNow">
-                            <button>Order Now </button>
+                        <div class="order-now-container">
+                            <button class="order-now-btn pulse">
+                                <span class="btn-text">Order Now</span>
+                                <span class="btn-icon">→</span>
+                            </button>
+                            
+                            <div class="order-popup">
+                                <div class="popup-content">
+                                    <span class="close-popup">&times;</span>
+                                    <h2>Place Your Order</h2>
+                                    <p>Please fill in your details to complete your order</p>
+                                    
+                                    <form class="order-form">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Your Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" placeholder="Phone Number" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" placeholder="Email Address">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea placeholder="Special Instructions (optional)"></textarea>
+                                        </div>
+                                        
+                                        <div class="form-actions">
+                                            <button type="button" class="cancel-btn">Cancel</button>
+                                            <button type="submit" class="submit-btn">Confirm Order</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -121,8 +168,39 @@
                         <p>Black Forest cake: where chocolate meets cherry in a love story of layers.
                         </p>
                         <p>Price=600 Rs.</p>
-                        <div class="orderNow">
-                            <button>Order Now </button>
+                        <div class="order-now-container">
+                            <button class="order-now-btn pulse">
+                                <span class="btn-text">Order Now</span>
+                                <span class="btn-icon">→</span>
+                            </button>
+                            
+                            <div class="order-popup">
+                                <div class="popup-content">
+                                    <span class="close-popup">&times;</span>
+                                    <h2>Place Your Order</h2>
+                                    <p>Please fill in your details to complete your order</p>
+                                    
+                                    <form class="order-form">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Your Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" placeholder="Phone Number" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" placeholder="Email Address">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea placeholder="Special Instructions (optional)"></textarea>
+                                        </div>
+                                        
+                                        <div class="form-actions">
+                                            <button type="button" class="cancel-btn">Cancel</button>
+                                            <button type="submit" class="submit-btn">Confirm Order</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -135,8 +213,39 @@
                         <p>Strawberry cake: sunshine in every slice.
                         </p>
                         <p>Price=800 Rs.</p>
-                        <div class="orderNow">
-                            <button>Order Now </button>
+                        <div class="order-now-container">
+                            <button class="order-now-btn pulse">
+                                <span class="btn-text">Order Now</span>
+                                <span class="btn-icon">→</span>
+                            </button>
+                            
+                            <div class="order-popup">
+                                <div class="popup-content">
+                                    <span class="close-popup">&times;</span>
+                                    <h2>Place Your Order</h2>
+                                    <p>Please fill in your details to complete your order</p>
+                                    
+                                    <form class="order-form">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Your Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" placeholder="Phone Number" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" placeholder="Email Address">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea placeholder="Special Instructions (optional)"></textarea>
+                                        </div>
+                                        
+                                        <div class="form-actions">
+                                            <button type="button" class="cancel-btn">Cancel</button>
+                                            <button type="submit" class="submit-btn">Confirm Order</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -149,8 +258,39 @@
                         <p>When elegance meets flavor, you get vanilla cake.
                         </p>
                         <p>Price=550 Rs.</p>
-                        <div class="orderNow">
-                            <button>Order Now </button>
+                        <div class="order-now-container">
+                            <button class="order-now-btn pulse">
+                                <span class="btn-text">Order Now</span>
+                                <span class="btn-icon">→</span>
+                            </button>
+                            
+                            <div class="order-popup">
+                                <div class="popup-content">
+                                    <span class="close-popup">&times;</span>
+                                    <h2>Place Your Order</h2>
+                                    <p>Please fill in your details to complete your order</p>
+                                    
+                                    <form class="order-form">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Your Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" placeholder="Phone Number" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" placeholder="Email Address">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea placeholder="Special Instructions (optional)"></textarea>
+                                        </div>
+                                        
+                                        <div class="form-actions">
+                                            <button type="button" class="cancel-btn">Cancel</button>
+                                            <button type="submit" class="submit-btn">Confirm Order</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -169,9 +309,40 @@
                         <p>One slice of red velvet, and the world feels right again.
                         </p>
                         <p>Price=1000 Rs.</p>
-                        <div class="orderNow">
-                            <button>Order Now </button>
-                        </div>
+                        <div class="order-now-container">
+    <button class="order-now-btn pulse">
+        <span class="btn-text">Order Now</span>
+        <span class="btn-icon">→</span>
+    </button>
+    
+    <div class="order-popup">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <h2>Place Your Order</h2>
+            <p>Please fill in your details to complete your order</p>
+            
+            <form class="order-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Special Instructions (optional)"></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn">Cancel</button>
+                    <button type="submit" class="submit-btn">Confirm Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
                     </div>
                 </div>
                 <div class="swiper-slide box">
@@ -183,8 +354,39 @@
                         <p>It’s not just cake. It’s tradition wrapped in sweetness.
                         </p>
                         <p>Price=1200 Rs.</p>
-                        <div class="orderNow">
-                            <button>Order Now </button>
+                        <div class="order-now-container">
+                            <button class="order-now-btn pulse">
+                                <span class="btn-text">Order Now</span>
+                                <span class="btn-icon">→</span>
+                            </button>
+                            
+                            <div class="order-popup">
+                                <div class="popup-content">
+                                    <span class="close-popup">&times;</span>
+                                    <h2>Place Your Order</h2>
+                                    <p>Please fill in your details to complete your order</p>
+                                    
+                                    <form class="order-form">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Your Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" placeholder="Phone Number" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" placeholder="Email Address">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea placeholder="Special Instructions (optional)"></textarea>
+                                        </div>
+                                        
+                                        <div class="form-actions">
+                                            <button type="button" class="cancel-btn">Cancel</button>
+                                            <button type="submit" class="submit-btn">Confirm Order</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -197,8 +399,39 @@
                         <p>Pineapple cake—where tropical dreams come true.
                         </p>
                         <p>Price=700 Rs.</p>
-                        <div class="orderNow">
-                            <button>Order Now </button>
+                        <div class="order-now-container">
+                            <button class="order-now-btn pulse">
+                                <span class="btn-text">Order Now</span>
+                                <span class="btn-icon">→</span>
+                            </button>
+                            
+                            <div class="order-popup">
+                                <div class="popup-content">
+                                    <span class="close-popup">&times;</span>
+                                    <h2>Place Your Order</h2>
+                                    <p>Please fill in your details to complete your order</p>
+                                    
+                                    <form class="order-form">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Your Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" placeholder="Phone Number" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" placeholder="Email Address">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea placeholder="Special Instructions (optional)"></textarea>
+                                        </div>
+                                        
+                                        <div class="form-actions">
+                                            <button type="button" class="cancel-btn">Cancel</button>
+                                            <button type="submit" class="submit-btn">Confirm Order</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -211,8 +444,39 @@
                         <p>Cool, creamy, and cake-tastically dreamy.
                         </p>
                         <p>Price=900 Rs.</p>
-                        <div class="orderNow">
-                            <button>Order Now </button>
+                        <div class="order-now-container">
+                            <button class="order-now-btn pulse">
+                                <span class="btn-text">Order Now</span>
+                                <span class="btn-icon">→</span>
+                            </button>
+                            
+                            <div class="order-popup">
+                                <div class="popup-content">
+                                    <span class="close-popup">&times;</span>
+                                    <h2>Place Your Order</h2>
+                                    <p>Please fill in your details to complete your order</p>
+                                    
+                                    <form class="order-form">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Your Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" placeholder="Phone Number" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" placeholder="Email Address">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea placeholder="Special Instructions (optional)"></textarea>
+                                        </div>
+                                        
+                                        <div class="form-actions">
+                                            <button type="button" class="cancel-btn">Cancel</button>
+                                            <button type="submit" class="submit-btn">Confirm Order</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -236,8 +500,39 @@
                             and swirled with vanilla buttercream!</p>
                         <p>This is very sweet cupcake.</p>
                         <p>Price=140 Rs.</p>
-                        <div class="orderNow">
-                            <button>Order Now </button>
+                        <div class="order-now-container">
+                            <button class="order-now-btn pulse">
+                                <span class="btn-text">Order Now</span>
+                                <span class="btn-icon">→</span>
+                            </button>
+                            
+                            <div class="order-popup">
+                                <div class="popup-content">
+                                    <span class="close-popup">&times;</span>
+                                    <h2>Place Your Order</h2>
+                                    <p>Please fill in your details to complete your order</p>
+                                    
+                                    <form class="order-form">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Your Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" placeholder="Phone Number" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" placeholder="Email Address">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea placeholder="Special Instructions (optional)"></textarea>
+                                        </div>
+                                        
+                                        <div class="form-actions">
+                                            <button type="button" class="cancel-btn">Cancel</button>
+                                            <button type="submit" class="submit-btn">Confirm Order</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                         <a href="#blogs" class="btn">learn more</a>
                     </div>
@@ -254,8 +549,39 @@
 
                         <p>This is very sweet cupcake.</p>
                         <p>Price=220 Rs.</p>
-                        <div class="orderNow">
-                            <button>Order Now </button>
+                        <div class="order-now-container">
+                            <button class="order-now-btn pulse">
+                                <span class="btn-text">Order Now</span>
+                                <span class="btn-icon">→</span>
+                            </button>
+                            
+                            <div class="order-popup">
+                                <div class="popup-content">
+                                    <span class="close-popup">&times;</span>
+                                    <h2>Place Your Order</h2>
+                                    <p>Please fill in your details to complete your order</p>
+                                    
+                                    <form class="order-form">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Your Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" placeholder="Phone Number" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" placeholder="Email Address">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea placeholder="Special Instructions (optional)"></textarea>
+                                        </div>
+                                        
+                                        <div class="form-actions">
+                                            <button type="button" class="cancel-btn">Cancel</button>
+                                            <button type="submit" class="submit-btn">Confirm Order</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                         <a href="#blogs" class="btn">learn more</a>
                     </div>
@@ -271,8 +597,39 @@
                         </p>
                         <p>This is very sweet cupcake.</p>
                         <p>Price=110 Rs.</p>
-                        <div class="orderNow">
-                            <button>Order Now </button>
+                        <div class="order-now-container">
+                            <button class="order-now-btn pulse">
+                                <span class="btn-text">Order Now</span>
+                                <span class="btn-icon">→</span>
+                            </button>
+                            
+                            <div class="order-popup">
+                                <div class="popup-content">
+                                    <span class="close-popup">&times;</span>
+                                    <h2>Place Your Order</h2>
+                                    <p>Please fill in your details to complete your order</p>
+                                    
+                                    <form class="order-form">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Your Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" placeholder="Phone Number" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" placeholder="Email Address">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea placeholder="Special Instructions (optional)"></textarea>
+                                        </div>
+                                        
+                                        <div class="form-actions">
+                                            <button type="button" class="cancel-btn">Cancel</button>
+                                            <button type="submit" class="submit-btn">Confirm Order</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                         <a href="#blogs" class="btn">learn more</a>
                     </div>
@@ -286,22 +643,52 @@
         </div>
     </section>
 
-    <section class="newsletter">
-        <form action="">
-            <h3>subscribe for latest update</h3>
-            <input type="email" name="" placeholder="enter your email" id="" class="box">
-            <input type="submit" value="subscribe" class="box2">
-
-        </form>
-    </section>
-    <div>
-        <form action="https://hook.us2.make.com/m79gps59qlyrpwfovhdq6xmglvlmo0qu" method="POST" class="prinsh">
-            <input type="text" name="cake" placeholder="Cake Name" />
-            <input type="number" name="quantity" placeholder="Quantity" />
-            <input type="text" name="customer" placeholder="Your Name" />
-            <button type="submit">Place Order</button>
+    <div class="subscribe-container">
+        <div class="subscribe-section">
+            <h3>Subscribe for latest cakes!</h3>
+            <form id="newsletterForm" class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Confirmation Popup -->
+    <div id="subscribePopup" class="subscribe-popup">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <div class="popup-icon">🎂</div>
+            <h3>Subscription Confirmed!</h3>
+            <p>Thank you for subscribing to our cake updates.</p>
+            <p>We'll send delicious cake news to <span id="subscribedEmail"></span></p>
+            <button class="popup-button">Sweet!</button>
+        </div>
+    </div>
+    <div class="order-form-container">
+        <form id="cakeOrderForm" class="prinsh">
+            <input type="text" name="cake" placeholder="Cake Name" required />
+            <input type="number" name="quantity" placeholder="Quantity" min="1" required />
+            <input type="text" name="customer" placeholder="Your Name" required />
+            <input type="tel" name="phone" placeholder="WhatsApp Number" required />
+            <textarea name="instructions" placeholder="Special Instructions (optional)"></textarea>
+            <button type="submit" class="order-button">
+                <i class="fab fa-whatsapp"></i> Place Order via WhatsApp
+            </button>
         </form>
     </div>
+    
+    <!-- Popup Modal -->
+    <div id="orderConfirmation" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Order Confirmation</h2>
+            <p>Your cake order has been placed successfully!</p>
+            <div class="order-details" id="orderDetails"></div>
+            <button class="confirm-button">OK</button>
+        </div>
+    </div>
+    
+    
     <section class="review" id="review">
         <div class="heading">
             <h2>client review</h2>
